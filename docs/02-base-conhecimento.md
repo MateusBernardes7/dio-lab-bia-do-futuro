@@ -22,16 +22,10 @@ Via código:
 import pandas as pd
 import json
 
-#CSV
-historico = pd.read_csv('data/historico_atendimento.csv')
-transacoes = pd.read_csv('data/transacoes.csv')
-
-#JSON
-with open ('data/perfil_investidor.json', 'r', encoding='utf=8') as f
-  perfil = json.load(f)
-
-with open ('data/proutos_financeiros.json', 'r', encoding='utf=8') as f
-  produtos = json.load(f)
+perfil = json.load(open('./data/perfil_investidos.json'))
+transacoes = pd.read_csv('./data/transacoes.csv')
+historico = pd.read_csv('./data/historico_atendimento.csv')
+produtos = json.load(open('./data/produtos_financeiros.json'))
 ```
 
 ### Como os dados são usados no prompt?
